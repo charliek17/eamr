@@ -1,0 +1,8 @@
+services:
+  eamr:
+    image: eamr:latest
+    ports:
+      - "8443:443"
+    volumes:
+      - ./certs/:/usr/share/nginx/certs/:ro
+      - ./planetfiles/:/opt/ece-images/:rw
